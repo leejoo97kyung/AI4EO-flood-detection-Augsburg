@@ -98,15 +98,15 @@ Sentinel-1 SAR-based flood mapping and post-flood vegetation recovery analysis f
 
 **U-Net Flood Detection Results on Test Set**
 
-[image:30]
+![Training Curves](trainingcurve.png)
 
 **Training curves: Loss and F1/IoU over 50 epochs**
 
-[image:29]
+![Time Series](timeseries.png)
 
 **Green Space VH Time Series: Flooded vs Dry**
 
-[image:28]
+![t-SNE](lstm-tsne.png)
 
 **LSTM Triplet Network Embeddings (t-SNE)**
 
