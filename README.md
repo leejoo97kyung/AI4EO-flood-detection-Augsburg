@@ -94,7 +94,7 @@ Sentinel-1 SAR-based flood mapping and post-flood vegetation recovery analysis f
 
 ---
 
-[image:27]
+![U-Net Results](u-net-results.png)
 
 **U-Net Flood Detection Results on Test Set**
 
