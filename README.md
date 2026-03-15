@@ -89,3 +89,26 @@ Raw data files are not included. Run the GEE scripts and export to your own Goog
 
 **LSTM Triplet Network**: Urban park cluster purity 80% (8/10 patches). Natural vegetation types (wetland, riparian, grassland) partially overlap in embedding space.
 
+
+Sentinel-1 SAR-based flood mapping and post-flood vegetation recovery analysis for the Augsburg region (June 2024 flood event).
+
+---
+
+[image:27]
+
+**U-Net Flood Detection Results on Test Set**
+
+[image:30]
+
+**Training curves: Loss and F1/IoU over 50 epochs**
+
+[image:29]
+
+**Green Space VH Time Series: Flooded vs Dry**
+
+[image:28]
+
+**LSTM Triplet Network Embeddings (t-SNE)**
+
+---
+
