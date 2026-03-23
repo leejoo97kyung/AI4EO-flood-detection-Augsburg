@@ -23,12 +23,12 @@ Three research hypotheses:
 
 ```
 .
-├── AI4EO_Final_clean.ipynb        # U-Net + LSTM Triplet Network (Python/PyTorch)
+├── Main.ipynb                     # U-Net + LSTM Triplet Network (Python/PyTorch)
 ├── gee/
-│   ├── step1_flood_detection.js       # Threshold-based flood mask
-│   ├── step2_accuracy_zki.js          # Accuracy evaluation vs ZKI ground truth
-│   ├── step3_timeseries_recovery.js   # Post-flood VH backscatter time series
-│   └── threshold_sensitivity.js       # Threshold sensitivity analysis (-1 to -7 dB)
+│   ├── step1_flood_detection.js
+│   ├── step2_accuracy_zki.js
+│   ├── step3_timeseries_recovery.js
+│   └── threshold_sensitivity.js
 ├── README.md
 └── LICENSE
 ```
@@ -54,19 +54,21 @@ Google Earth Engine scripts run in the [GEE Code Editor](https://code.earthengin
 | SAR chips (21 chips, 256×256 px) | Exported from GEE → Google Drive | — |
 | Green space time series (40 patches × 5 dates(Pre (05-21), Peak (06-02), Post (06-13, 06-25, 07-07))| Extracted via GEE → CSV | — |
 
-Raw data files are not included. Run the GEE scripts and export to your own Google Drive at path `AI4EO_chips/`.
-
+Raw data files are not included. Run the GEE scripts in gee/ and export outputs to your own Google Drive.
 ---
 
 ## Reproducing Results
 
-1. Run GEE scripts in `gee/` to generate flood masks and export chips/CSV to Google Drive
-2. Open `AI4EO_Final_clean.ipynb` in Google Colab and mount Drive
-3. Run cells sequentially:
+1. Download ZKI ACT163 flood mask from 
+   https://activations.zki.dlr.de/images/products/ACT163/P02/
+   and place it in your Google Drive
+2. Run GEE scripts in `gee/` to generate flood masks and export chips/CSV to Google Drive
+3. Open `Main.ipynb` in Google Colab and mount Drive
+4. Run cells sequentially:
    - Cells 0–7: dependency install, data loading, U-Net training
    - Cells 8–11: evaluation and visualization
    - Cells 12–15: LSTM triplet training and t-SNE analysis
-
+     
 ---
 
 ## Results
