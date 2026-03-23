@@ -1,5 +1,5 @@
 // ============================================================
-// AI4EO --- Step 3: Post-flood VH Backscatter Time Series
+// A4EO --- Step 3: Post-flood VH Backscatter Time Series
 // ============================================================
 
 var region = ee.Geometry.Rectangle([10.75, 48.25, 11.05, 48.50]);
