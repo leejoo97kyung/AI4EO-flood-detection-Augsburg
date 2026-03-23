@@ -13,7 +13,7 @@ Sentinel-1 SAR-based flood mapping and post-flood vegetation recovery analysis f
 
 Three research hypotheses:
 
-- **H1**: U-Net achieves F1 ≥ 0.75, outperforming threshold baseline → **Confirmed** (F1 = 0.829)
+- **H1**: U-Net achieves F1 ≥ 0.75, outperforming threshold baseline → **Confirmed** (F1 = 0.833)
 - **H2**: Riparian forests recover faster than wetlands in VH backscatter → **Partially supported**
 - **H3**: LSTM triplet network clusters green spaces by recovery behavior without OSM labels → **Partially supported**
 
@@ -52,7 +52,7 @@ Google Earth Engine scripts run in the [GEE Code Editor](https://code.earthengin
 | Sentinel-1 GRD | Google Earth Engine (`COPERNICUS/S1_GRD`) | Copernicus open access |
 | ZKI ACT163 flood mask | DLR ZKI (2024-06-02, 16.81 km²) | Copernicus EMS open access |
 | SAR chips (21 chips, 256×256 px) | Exported from GEE → Google Drive | — |
-| Green space time series (40 patches × 5 dates) | Extracted via GEE → CSV | — |
+| Green space time series (40 patches × 5 dates(Pre (05-21), Peak (06-02), Post (06-13, 06-25, 07-07))| Extracted via GEE → CSV | — |
 
 Raw data files are not included. Run the GEE scripts and export to your own Google Drive at path `AI4EO_chips/`.
 
@@ -76,7 +76,7 @@ Raw data files are not included. Run the GEE scripts and export to your own Goog
 | Method | Precision | Recall | F1 | IoU |
 |---|---|---|---|---|
 | Threshold (−4 dB) | 83.4% | 40.0% | 0.541 | 0.371 |
-| **U-Net (ResNet-34)** | **89.0%** | **77.6%** | **0.829** | **0.708** |
+| **U-Net (ResNet-34)** | **89.0%** | **77.6%** | **0.833** | **0.714** |
 
 **Green Space Recovery (VH backscatter, peak → +12 days)**
 
@@ -85,7 +85,7 @@ Raw data files are not included. Run the GEE scripts and export to your own Goog
 | Lech-Auen Nord | Riparian forest | +1.555 | Fast (<12 days) |
 | Lech-Auen Sued | Riparian forest | +0.845 | Fast (<12 days) |
 | Lech-Wertach Mitte | Wetland | +0.780 | Moderate |
-| Wertach-Auen | Wetland | −0.616 | Slow (>36 days) |
+| Wertach-Auen | Wetland | +0.616 | Slow (>36 days) |
 
 **LSTM Triplet Network**: Urban park cluster purity 80% (8/10 patches). Natural vegetation types (wetland, riparian, grassland) partially overlap in embedding space.
 
