@@ -60,7 +60,7 @@ Raw data files are not included. Run the GEE scripts in gee/ and export outputs 
 ## Reproducing Results
 
 1. Download ZKI ACT163 flood mask from 
-   https://activations.zki.dlr.de/images/products/ACT163/P02/
+   https://activations.zki.dlr.de/en/activations/items/ACT163/
    and place it in your Google Drive
 2. Run GEE scripts in `gee/` to generate flood masks and export chips/CSV to Google Drive
 3. Open `Main.ipynb` in Google Colab and mount Drive
